@@ -2,6 +2,8 @@
 // when user clicks anywhere on the page, the "makeQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+window.setInterval(printQuote, 4200);
+
 // quote data
 var quotes = [
   {
@@ -61,7 +63,7 @@ function getRandomQuote() {
   while(usedQuotes.indexOf(randomIndex) !== -1 && usedQuotes.length > 0) {
     randomIndex = Math.floor(Math.random() * quotes.length);
   }
-  
+
   usedQuotes.push(randomIndex);
   // return the random quote
   return quotes[randomIndex];
