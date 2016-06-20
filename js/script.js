@@ -58,19 +58,21 @@ function getRandomColor() {
 
 // prints quote to page when user clicks "Show Another Quote"
 function printQuote() {
-  // saves random quote in variable
+  document.getElementById('loadQuote').innerHTML = "";
+
   var usedQuote = getRandomQuote();
   var newColor = getRandomColor();
   var newHTML = '<p class="quote">' + usedQuote.quote +'</p> <p class="source">' + usedQuote.source;
 
-  if(usedQuote.citation !== "") {
+  if(usedQuote.citation !== undefined) {
     newHTML += '<span class="citation">' + usedQuote.citation + '</span>';
   }
 
-  if(usedQuote.year !== "") {
-    newHTML += '<span class="year">' + usedQuote.year + '</span></p>'
+  if(usedQuote.year !== undefined) {
+    newHTML += '<span class="year">' + usedQuote.year + '</span>';
   }
 
+  newHTML += '</p>';
   document.getElementById('quote-box').innerHTML = newHTML;
 
   document.body.style.backgroundColor = newColor;
