@@ -28,4 +28,6 @@ function printQuote() {
   // saves random quote in variable
   var usedQuote = getRandomQuote();
   var newColor = getRandomColor();
+  var newHTML = "";
+  document.getElementById('quote-box').innerHTML = newHTML;
 }
