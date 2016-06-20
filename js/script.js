@@ -57,7 +57,10 @@ function getRandomQuote() {
 }
 
 function getRandomColor() {
+  var colors = ["blue", "red", "pink", "yellow", "purple", "orange", "black", "gray", "fuchsia", "olive", "silver", "teal"];
+  var randomColor = Math.floor(Math.random() * colors.length);
     // returns random color from array
+  return colors[randomColor];
 }
 
 // prints quote to page when user clicks "Show Another Quote"
@@ -76,4 +79,6 @@ function printQuote() {
   }
 
   document.getElementById('quote-box').innerHTML = newHTML;
+
+  console.log(newColor);
 }
