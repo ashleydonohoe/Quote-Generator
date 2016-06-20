@@ -98,6 +98,17 @@ body {
   text-shadow: 2px 2px black;
 }
 
+@media (max-width: 700px) {
+  #stopQuote {
+    bottom: 100px;
+    left: 50%;
+  }
+
+  #loadQuote {
+    left: 50%;
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 420px) {
   .quote {
     font-size: 2.5rem;
