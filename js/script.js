@@ -5,10 +5,10 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 // quote data
 var quotes = [
   {
-    quote: "",
-    source: "",
-    citation: "",
-    year: ""
+    quote: "Test quote",
+    source: "testing only",
+    citation: "None",
+    year: "2016"
   }
 ];
 
@@ -26,8 +26,9 @@ function getRandomColor() {
 // prints quote to page when user clicks "Show Another Quote"
 function printQuote() {
   // saves random quote in variable
-  var usedQuote = getRandomQuote();
+  //var usedQuote = getRandomQuote();
+  var usedQuote = quotes[0];
   var newColor = getRandomColor();
-  var newHTML = "";
+  var newHTML = '<p class="quote">' + usedQuote.quote +'</p> <p class="source">' + usedQuote.source + '<span class="citation">' + usedQuote.citation + '</span> <span class="year">' + usedQuote.year + '</span></p>'
   document.getElementById('quote-box').innerHTML = newHTML;
 }
