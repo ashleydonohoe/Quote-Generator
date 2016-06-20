@@ -1,8 +1,13 @@
 // event listener to respond to clicks on the page
 // when user clicks anywhere on the page, the "makeQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('stopQuote').addEventListener("click", stopTimer, false);
 
 var timer = window.setInterval(printQuote, 4200);
+
+function stopTimer() {
+  clearInterval(timer);
+}
 
 // quote data
 var quotes = [
