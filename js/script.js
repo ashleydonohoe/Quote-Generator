@@ -7,44 +7,37 @@ var quotes = [
   {
     quote: "The best preparation for tomorrow is doing your best today.",
     source: "H. Jackson Brown, Jr.",
-    citation: "BrainyQuote.com",
-    year: ""
+    citation: "BrainyQuote.com"
   },
   {
     quote: "I can't change the direction of the wind, but I can adjust my sails to always reach my destination",
     source: "Jimmy Dean",
-    citation: "BrainyQuote.com",
-    year: ""
+    citation: "BrainyQuote.com"
   },
   {
     quote: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
     source: "Helen Keller",
-    citation: "BrainyQuote.com",
-    year: ""
+    citation: "BrainyQuote.com"
   },
   {
     quote: "Perfection is not attainable, but if we chase perfection we can catch excellence.",
     source: "Vince Lombardi",
-    citation: "BrainyQuote.com",
-    year: ""
+    citation: "BrainyQuote.com"
   },
   {
     quote: "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
     source: "Francis of Assisi",
-    citation: "BrainyQuote.com",
-    year: ""
+    citation: "BrainyQuote.com"
   },
   {
     quote: "We know what we are, but know not what we may be.",
     source: "William Shakespeare",
-    citation: "BrainyQuote.com",
-    year: ""
+    citation: "BrainyQuote.com"
   },
   {
     quote: "If opportunity doesn't knock, build a door.",
     source: "Milton Berie",
-    citation: "BrainyQuote.com",
-    year: ""
+    citation: "BrainyQuote.com"
   }
 ];
 
