@@ -1,12 +1,21 @@
 // event listener to respond to clicks on the page
 // when user clicks anywhere on the page, the "makeQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-document.getElementById('stopQuote').addEventListener("click", stopTimer, false);
+document.getElementById('stopQuote').addEventListener("click", toggleTimer, false);
 
 var timer = window.setInterval(printQuote, 4200);
+var timerEnabled = true;
 
-function stopTimer() {
-  clearInterval(timer);
+function toggleTimer() {
+  if(timerEnabled) {
+    clearInterval(timer);
+    document.getElementById('stopQuote').innerText = "Resume Autorefresh";
+    timerEnabled = false;
+  } else {
+    timer = window.setInterval(printQuote, 4200);
+    document.getElementById('stopQuote').innerText = "Stop Autorefresh";
+    timerEnabled = true;
+  }
 }
 
 // quote data
