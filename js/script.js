@@ -80,5 +80,5 @@ function printQuote() {
 
   document.getElementById('quote-box').innerHTML = newHTML;
 
-  console.log(newColor);
+  document.body.style.backgroundColor = newColor;
 }
