@@ -72,6 +72,7 @@ body {
   padding: 15px 0;
   transition: .5s ;
   text-shadow: 2px 2px black;
+  margin-top: 30px;
 }
 #loadQuote:hover,
 #stopQuote:hover {
@@ -98,7 +99,24 @@ body {
   text-shadow: 2px 2px black;
 }
 
+@media (max-width: 420px) {
+  .quote {
+    font-size: 2rem;
+  }
+  .quote:before, .quote:after {
+    font-size: 3rem;
+  }
+  .source {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 700px) {
+
+  .quote-box {
+    margin-bottom: 100px;
+
+  }
   #stopQuote {
     bottom: 100px;
     left: 50%;
@@ -107,16 +125,6 @@ body {
   #loadQuote {
     left: 50%;
     margin-bottom: 30px;
-  }
-}
-@media (max-width: 420px) {
-  .quote {
-    font-size: 2.5rem;
-  }
-  .quote:before, .quote:after {
-    font-size: 3rem;
-  }
-  .source {
-    font-size: 1rem;
+    margin-top: 20px;
   }
 }
