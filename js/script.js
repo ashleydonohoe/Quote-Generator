@@ -48,10 +48,21 @@ var quotes = [
   }
 ];
 
+// Stores indices for used quotes
+var usedQuotes = [];
+
 // returns a random quote
 function getRandomQuote() {
   // select random quote from quotes array
   var randomIndex = Math.floor(Math.random() * quotes.length);
+  if(usedQuotes.length === quotes.length) {
+    usedQuotes = [];
+  }
+  while(usedQuotes.indexOf(randomIndex) !== -1 && usedQuotes.length > 0) {
+    randomIndex = Math.floor(Math.random() * quotes.length);
+  }
+  
+  usedQuotes.push(randomIndex);
   // return the random quote
   return quotes[randomIndex];
 }
@@ -69,10 +80,10 @@ function printQuote() {
 
   var usedQuote = getRandomQuote();
   var newColor = getRandomColor();
-  var newHTML = '<p class="quote">' + usedQuote.quote +'</p> <p class="source">' + usedQuote.source;
+  var newHTML = '<p class="quote">' + usedQuote.quote +'</p> <p class="source">' + usedQuote.category + ' quote by ' + usedQuote.source;
 
   if(usedQuote.citation !== undefined) {
-    newHTML += '<span class="citation">' + usedQuote.category + ' quote by ' + usedQuote.citation + '</span>';
+    newHTML += '<span class="citation">' + usedQuote.citation + '</span>';
   }
 
   if(usedQuote.year !== undefined) {
