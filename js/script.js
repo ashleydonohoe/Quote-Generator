@@ -7,37 +7,44 @@ var quotes = [
   {
     quote: "The best preparation for tomorrow is doing your best today.",
     source: "H. Jackson Brown, Jr.",
-    citation: "BrainyQuote.com"
+    citation: "BrainyQuote.com",
+    category: "inspirational"
   },
   {
     quote: "I can't change the direction of the wind, but I can adjust my sails to always reach my destination",
     source: "Jimmy Dean",
-    citation: "BrainyQuote.com"
+    citation: "BrainyQuote.com",
+    category: "inspirational"
   },
   {
     quote: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
     source: "Helen Keller",
-    citation: "BrainyQuote.com"
+    citation: "BrainyQuote.com",
+    category: "inspirational"
   },
   {
     quote: "Perfection is not attainable, but if we chase perfection we can catch excellence.",
     source: "Vince Lombardi",
-    citation: "BrainyQuote.com"
+    citation: "BrainyQuote.com",
+    category: "inspirational"
   },
   {
     quote: "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
     source: "Francis of Assisi",
-    citation: "BrainyQuote.com"
+    citation: "BrainyQuote.com",
+    category: "inspirational"
   },
   {
     quote: "We know what we are, but know not what we may be.",
     source: "William Shakespeare",
-    citation: "BrainyQuote.com"
+    citation: "BrainyQuote.com",
+    category: "inspirational"
   },
   {
     quote: "If opportunity doesn't knock, build a door.",
     source: "Milton Berie",
-    citation: "BrainyQuote.com"
+    citation: "BrainyQuote.com",
+    category: "inspirational"
   }
 ];
 
@@ -58,14 +65,14 @@ function getRandomColor() {
 
 // prints quote to page when user clicks "Show Another Quote"
 function printQuote() {
-  document.getElementById('loadQuote').innerHTML = "";
+  document.getElementById('quote-box').innerHTML = "";
 
   var usedQuote = getRandomQuote();
   var newColor = getRandomColor();
   var newHTML = '<p class="quote">' + usedQuote.quote +'</p> <p class="source">' + usedQuote.source;
 
   if(usedQuote.citation !== undefined) {
-    newHTML += '<span class="citation">' + usedQuote.citation + '</span>';
+    newHTML += '<span class="citation">' + usedQuote.category + ' quote by ' + usedQuote.citation + '</span>';
   }
 
   if(usedQuote.year !== undefined) {
