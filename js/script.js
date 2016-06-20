@@ -2,7 +2,7 @@
 // when user clicks anywhere on the page, the "makeQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-window.setInterval(printQuote, 4200);
+var timer = window.setInterval(printQuote, 4200);
 
 // quote data
 var quotes = [
